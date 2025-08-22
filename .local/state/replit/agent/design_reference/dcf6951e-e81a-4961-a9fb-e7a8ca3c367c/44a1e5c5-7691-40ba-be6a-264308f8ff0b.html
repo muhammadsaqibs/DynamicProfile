@@ -1,0 +1,724 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Saqib - Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#64748B',
+                        accent: '#F59E0B',
+                        dark: '#0F172A',
+                        light: '#F8FAFC'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'typewriter': 'typewriter 3s steps(20) infinite',
+                        'blink': 'blink 1s infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes typewriter {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .timeline-line {
+            background: linear-gradient(to bottom, #1E40AF, #F59E0B);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .typewriter-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: #F59E0B;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #1E40AF, #3B82F6);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%);
+        }
+    </style>
+</head>
+<body class="font-inter bg-light text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-primary">Muhammad Saqib</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-secondary hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="text-secondary hover:text-primary transition-colors">About</a>
+                    <a href="#education" class="text-secondary hover:text-primary transition-colors">Education</a>
+                    <a href="#skills" class="text-secondary hover:text-primary transition-colors">Skills</a>
+                    <a href="#projects" class="text-secondary hover:text-primary transition-colors">Projects</a>
+                    <a href="#goals" class="text-secondary hover:text-primary transition-colors">Goals</a>
+                    <a href="#contact" class="text-secondary hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-primary"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left animate-fade-in">
+                    <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6">
+                        Hi, I'm <span class="text-accent">Muhammad Saqib</span>
+                    </h1>
+                    <div class="text-2xl lg:text-3xl text-gray-300 mb-8">
+                        <span>I'm a </span>
+                        <span id="typewriter" class="text-accent font-semibold typewriter-cursor"></span>
+                    </div>
+                    <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+                        A passionate problem solver first — and a developer second. I build digital systems that are not just functional, but impactful.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
+                            Hire Me
+                        </a>
+                        <a href="#projects" class="border-2 border-white text-white hover:bg-white hover:text-dark px-8 py-4 rounded-lg font-semibold transition-all">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center animate-slide-up">
+                    <div class="relative">
+                        <div class="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-accent shadow-2xl">
+                            <!-- Professional portrait of Muhammad Saqib in traditional Pakistani formal wear -->
+                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCABgAGADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//2Q==" alt="Muhammad Saqib - Professional Portrait" class="w-full h-full object-cover" data-mock="true" data-implementation="Use provided professional portrait image">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-accent text-white p-4 rounded-full shadow-lg">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-4">About Me</h2>
+                <p class="text-xl text-secondary max-w-3xl mx-auto">Hello! My name is Muhammad Saqib</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Hi, I'm Muhammad Saqib, a passionate problem solver first — and a developer second. While others chase code, I chase solutions. My journey into tech began with a deep desire to fix what's broken around us — especially in Pakistan — using technology as a tool for change.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        I specialize in the MERN Stack, and I build digital systems that are not just functional, but impactful. Every line of code I write is fueled by purpose: to solve real problems, not just follow tutorials.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        I don't just aim to become a full-stack developer — I aim to become a builder of systems that matter. Whether it's energy management, digital automation, or smart tools, I believe in creating software that speaks — that works silently in the background, transforming lives.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed font-semibold">
+                        This isn't just my career — it's my mission.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl">
+                            <!-- Professional headshot of Muhammad Saqib in business attire -->
+                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCABgAGADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//2Q==" alt="Muhammad Saqib Professional" class="w-full h-full object-cover" data-mock="true" data-implementation="Use professional image from about section">
+                        </div>
+                        <div class="absolute -top-4 -left-4 bg-primary text-white p-3 rounded-full">
+                            <i class="fas fa-user-graduate text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-4">Education Journey</h2>
+                <p class="text-xl text-secondary">My academic excellence and continuous learning path</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line rounded-full"></div>
+                
+                <div class="space-y-16">
+                    <!-- University Education -->
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
+                                <h3 class="text-2xl font-bold text-dark mb-2">Computer Science</h3>
+                                <h4 class="text-lg font-semibold text-primary mb-2">COMSATS University Islamabad</h4>
+                                <p class="text-secondary mb-2">Feb 2023 - June 2027</p>
+                                <p class="text-gray-600 mb-2">Currently in 6th Semester</p>
+                                <div class="bg-primary/10 px-3 py-1 rounded-full inline-block">
+                                    <span class="text-primary font-semibold">CGPA: 3.53/4.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-20 h-20 bg-white rounded-full border-4 border-primary flex items-center justify-center shadow-lg">
+                                <!-- COMSATS University logo in circular format -->
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="COMSATS University" class="w-16 h-16 rounded-full object-cover" data-mock="true" data-implementation="Use COMSATS University logo in circular format">
+                            </div>
+                        </div>
+                        
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    
+                    <!-- Intermediate Education -->
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-20 h-20 bg-white rounded-full border-4 border-accent flex items-center justify-center shadow-lg">
+                                <!-- Punjab Daanish School logo in circular format -->
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="Punjab Daanish School" class="w-16 h-16 rounded-full object-cover" data-mock="true" data-implementation="Use Punjab Daanish School logo in circular format">
+                            </div>
+                        </div>
+                        
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-accent">
+                                <h3 class="text-2xl font-bold text-dark mb-2">Intermediate in Computer Science (ICS)</h3>
+                                <h4 class="text-lg font-semibold text-accent mb-2">Punjab Daanish Higher Secondary School</h4>
+                                <p class="text-secondary mb-2">Mianwali, Punjab</p>
+                                <div class="bg-accent/10 px-3 py-1 rounded-full inline-block">
+                                    <span class="text-accent font-semibold">87% (A Grade)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Matriculation -->
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-500">
+                                <h3 class="text-2xl font-bold text-dark mb-2">Matriculation</h3>
+                                <h4 class="text-lg font-semibold text-green-600 mb-2">Punjab Daanish Secondary School</h4>
+                                <p class="text-secondary mb-2">Mianwali, Punjab</p>
+                                <div class="bg-green-100 px-3 py-1 rounded-full inline-block">
+                                    <span class="text-green-600 font-semibold">92% (A+ Grade)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-20 h-20 bg-white rounded-full border-4 border-green-500 flex items-center justify-center shadow-lg">
+                                <!-- Punjab Daanish School logo for matriculation -->
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="Punjab Daanish School" class="w-16 h-16 rounded-full object-cover" data-mock="true" data-implementation="Use Punjab Daanish School logo in circular format">
+                            </div>
+                        </div>
+                        
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-4">Technical Skills</h2>
+                <p class="text-xl text-secondary">Technologies and tools I work with</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Frontend Skills -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-code text-4xl text-blue-600 mb-2"></i>
+                        <h3 class="text-xl font-bold text-dark">Frontend</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">React.js</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">Next.js</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">HTML5</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">CSS3</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">JavaScript</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">Bootstrap</span>
+                    </div>
+                </div>
+                
+                <!-- Backend Skills -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-server text-4xl text-green-600 mb-2"></i>
+                        <h3 class="text-xl font-bold text-dark">Backend</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">Node.js</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">Express.js</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">Python</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">C++</span>
+                    </div>
+                </div>
+                
+                <!-- Database Skills -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-database text-4xl text-purple-600 mb-2"></i>
+                        <h3 class="text-xl font-bold text-dark">Database</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">MongoDB</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">MySQL</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">SQL</span>
+                    </div>
+                </div>
+                
+                <!-- Tools & Others -->
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-tools text-4xl text-orange-600 mb-2"></i>
+                        <h3 class="text-xl font-bold text-dark">Tools & Others</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">Git</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">Cursor AI</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">Bubble.io</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">DSA</span>
+                        <span class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block">OOP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-4">My Projects</h2>
+                <p class="text-xl text-secondary">Here are some of my featured projects</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News App -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-newspaper text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">News App</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive news application with real-time updates and category filtering.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React.js</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">API Integration</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/NewsApp" target="_blank" class="flex-1 bg-primary text-white py-2 px-4 rounded text-center hover:bg-primary/90 transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-primary text-primary py-2 px-4 rounded text-center hover:bg-primary hover:text-white transition-colors" data-mock="true">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text Editor -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-edit text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Text Editor</h3>
+                        <p class="text-gray-600 mb-4">A feature-rich text editor with formatting options and document management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">HTML</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">JavaScript</span>
+                            <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">CSS</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/Text-editor" target="_blank" class="flex-1 bg-primary text-white py-2 px-4 rounded text-center hover:bg-primary/90 transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-primary text-primary py-2 px-4 rounded text-center hover:bg-primary hover:text-white transition-colors" data-mock="true">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Currency Converter -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <i class="fas fa-exchange-alt text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Currency Converter</h3>
+                        <p class="text-gray-600 mb-4">Real-time currency converter with live exchange rates and responsive design.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">JavaScript</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">API</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">CSS</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/MY-CURRENCY-CONVERTER-APP" target="_blank" class="flex-1 bg-primary text-white py-2 px-4 rounded text-center hover:bg-primary/90 transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-primary text-primary py-2 px-4 rounded text-center hover:bg-primary hover:text-white transition-colors" data-mock="true">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Smart Desk Notes -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-sticky-note text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Smart Desk Notes</h3>
+                        <p class="text-gray-600 mb-4">Intelligent note-taking application with organization and search features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React.js</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Local Storage</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/smart-desk-notes" target="_blank" class="flex-1 bg-primary text-white py-2 px-4 rounded text-center hover:bg-primary/90 transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-primary text-primary py-2 px-4 rounded text-center hover:bg-primary hover:text-white transition-colors" data-mock="true">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- E-commerce Website -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">E-commerce Website</h3>
+                        <p class="text-gray-600 mb-4">Full-featured e-commerce platform with cart functionality and payment integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">MERN Stack</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/E-commerce-website" target="_blank" class="flex-1 bg-primary text-white py-2 px-4 rounded text-center hover:bg-primary/90 transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-primary text-primary py-2 px-4 rounded text-center hover:bg-primary hover:text-white transition-colors" data-mock="true">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Smart Meter App -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-tachometer-alt text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Smart Meter App</h3>
+                        <p class="text-gray-600 mb-4">IoT-based smart meter application for energy monitoring and management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React.js</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">IoT</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Node.js</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/smart-meter-app" target="_blank" class="flex-1 bg-primary text-white py-2 px-4 rounded text-center hover:bg-primary/90 transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-primary text-primary py-2 px-4 rounded text-center hover:bg-primary hover:text-white transition-colors" data-mock="true">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Goals Section -->
+    <section id="goals" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-4">Future Goals</h2>
+                <p class="text-xl text-secondary">My vision for the future of technology and innovation</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- AI Mastery -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-brain text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">AI Mastery</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Master artificial intelligence and machine learning to develop intelligent systems that can solve complex problems and create AI-powered solutions for Pakistan's technological advancement.
+                    </p>
+                </div>
+                
+                <!-- Bubble.io Expertise -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rocket text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">No-Code Innovation</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Become proficient in Bubble.io and no-code development to rapidly prototype and deploy powerful applications, democratizing software development and enabling faster innovation cycles.
+                    </p>
+                </div>
+                
+                <!-- Google Summer of Code -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code-branch text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Open Source Impact</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Participate in Google Summer of Code and contribute to meaningful open-source projects that benefit the global developer community while enhancing my collaborative coding skills.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <div class="bg-gradient-to-r from-primary to-accent p-8 rounded-xl text-white">
+                    <h3 class="text-2xl font-bold mb-4">Mission Statement</h3>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        My future goal is to master artificial intelligence and use it to develop powerful, intelligent projects and websites with AI chatbots that go beyond basic web apps. I want to shape the future of AI-powered software in Pakistan and make a difference that lasts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">Let's Connect</h2>
+                <p class="text-xl text-gray-300">Ready to discuss your next project or collaboration</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">Email</h3>
+                            <p class="text-gray-300">saqib.s09651100@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-phone text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">Phone</h3>
+                            <p class="text-gray-300">+92 344 733 7107</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">Location</h3>
+                            <p class="text-gray-300">Multan, Punjab, Pakistan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4 pt-6">
+                        <a href="https://www.linkedin.com/in/muhammad-saqib-ab4315291" target="_blank" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="https://www.instagram.com/saqib105official" target="_blank" class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="https://github.com/muhammadsaqibs" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900 transition-colors">
+                            <i class="fab fa-github text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-xl">
+                    <form class="space-y-6" data-implementation="Form should handle contact submissions">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-accent" data-mock="true">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-accent" data-mock="true">
+                        </div>
+                        <div>
+                            <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-accent resize-none" data-mock="true"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-accent hover:bg-accent/90 text-white py-3 px-6 rounded-lg font-semibold transition-colors" data-event="click:handleContactSubmit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400">&copy; 2024 Muhammad Saqib. All rights reserved.</p>
+                <p class="text-gray-400 mt-2">Built with passion for problem-solving and innovation</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Typewriter Effect
+        (function() {
+            const typewriter = document.getElementById('typewriter');
+            const words = [
+                'Problem Solver',
+                'MERN Stack Developer', 
+                'AI Enthusiast',
+                'Full Stack Developer',
+                'Python Developer',
+                'Next.js Developer'
+            ];
+            
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            
+            function type() {
+                const currentWord = words[wordIndex];
+                
+                if (isDeleting) {
+                    typewriter.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typewriter.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                let typeSpeed = isDeleting ? 50 : 100;
+                
+                if (!isDeleting && charIndex === currentWord.length) {
+                    typeSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    typeSpeed = 500;
+                }
+                
+                setTimeout(type, typeSpeed);
+            }
+            
+            type();
+        })();
+
+        // Smooth scrolling for navigation links
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        })();
+
+        // Navbar background on scroll
+        (function() {
+            const navbar = document.querySelector('nav');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('bg-white');
+                    navbar.classList.remove('bg-white/90');
+                } else {
+                    navbar.classList.add('bg-white/90');
+                    navbar.classList.remove('bg-white');
+                }
+            });
+        })();
+
+        // Project card hover effects
+        (function() {
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                });
+            });
+        })();
+
+        // TODO: Implement contact form submission
+        // TODO: Add loading states for form submission
+        // TODO: Implement project demo modals
+        // TODO: Add scroll-triggered animations
+    </script>
+</body>
+</html>

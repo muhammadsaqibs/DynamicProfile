@@ -1,24 +1,34 @@
 import { GraduationCap, Award } from "lucide-react";
-import daanishLogoPath from "@assets/logo69_1755832807482.jpg";
-import comsatsLogoPath from "@assets/un_1755832610792.jpg";
+import { motion } from "framer-motion";
+
+// Logos
+import logo67 from "../asset/logo67.jpg";
+import logo68 from "../asset/logo68.jpg";
 
 export default function EducationSection() {
   return (
     <section id="education" className="py-20 bg-dark-900">
       <div className="max-w-7xl mx-auto px-6">
+        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-500 to-cyan-400 bg-clip-text text-transparent mb-6">
             Education Journey
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
         </div>
-        
+
         <div className="relative max-w-4xl mx-auto">
           {/* Timeline Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary-500 to-cyan-400"></div>
-          
-          {/* University Education */}
-          <div className="relative mb-16">
+
+          {/* University */}
+          <motion.div
+            className="relative mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-dark-900 z-10"></div>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="md:text-right md:pr-16">
@@ -33,7 +43,7 @@ export default function EducationSection() {
                     <p className="text-gray-400 mb-2">Current: 6th Semester</p>
                     <div className="flex items-center justify-center md:justify-end">
                       <Award className="text-primary-400 mr-2" size={20} />
-                      <p className="text-primary-400 font-semibold">CGPA: 3.53/4.00</p>
+                      <p className="text-primary-400 font-semibold">CGPA: 3.56/4.00</p>
                     </div>
                     <p className="text-sm text-gray-400 mt-4">
                       Actively building skills in computer science with a focus on Software and Web Development projects.
@@ -42,25 +52,31 @@ export default function EducationSection() {
                 </div>
               </div>
               <div className="md:pl-16 text-center">
-                <img 
-                  src={comsatsLogoPath}
+                <img
+                  src={logo67}
                   alt="COMSATS University Islamabad Logo"
-                  className="w-20 h-20 rounded-full object-cover border-3 border-primary-500 mx-auto shadow-lg shadow-primary-500/20"
+                  className="w-40 h-40 rounded-full object-contain border-4 border-primary-500 mx-auto shadow-lg shadow-primary-500/20"
                   data-testid="comsats-logo"
                 />
               </div>
             </div>
-          </div>
-          
-          {/* Intermediate Education */}
-          <div className="relative mb-16">
+          </motion.div>
+
+          {/* Intermediate */}
+          <motion.div
+            className="relative mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-dark-900 z-10"></div>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="text-center md:pr-16 order-2 md:order-1">
-                <img 
-                  src={daanishLogoPath}
+                <img
+                  src={logo68}
                   alt="Punjab Daanish School Logo"
-                  className="w-20 h-20 rounded-full object-cover border-3 border-primary-500 mx-auto shadow-lg shadow-primary-500/20"
+                  className="w-40 h-40 rounded-full object-contain border-4 border-primary-500 mx-auto shadow-lg shadow-primary-500/20"
                   data-testid="daanish-logo-intermediate"
                 />
               </div>
@@ -84,10 +100,16 @@ export default function EducationSection() {
                 </div>
               </div>
             </div>
-          </div>
-          
+          </motion.div>
+
           {/* Matriculation */}
-          <div className="relative">
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
             <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-dark-900 z-10"></div>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="md:text-right md:pr-16">
@@ -110,15 +132,15 @@ export default function EducationSection() {
                 </div>
               </div>
               <div className="md:pl-16 text-center">
-                <img 
-                  src={daanishLogoPath}
+                <img
+                  src={logo68}
                   alt="Punjab Daanish School Logo"
-                  className="w-20 h-20 rounded-full object-cover border-3 border-primary-500 mx-auto shadow-lg shadow-primary-500/20"
+                  className="w-40 h-40 rounded-full object-contain border-4 border-primary-500 mx-auto shadow-lg shadow-primary-500/20"
                   data-testid="daanish-logo-matriculation"
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

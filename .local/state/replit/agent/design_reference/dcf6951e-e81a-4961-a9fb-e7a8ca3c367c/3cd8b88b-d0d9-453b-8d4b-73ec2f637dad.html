@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Saqib - Full Stack Developer & Problem Solver</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#1a202c',
+                        'secondary': '#2d3748',
+                        'accent': '#3182ce',
+                        'accent-light': '#0bc5ea',
+                        'success': '#10b981',
+                        'dark': '#121212',
+                        'light-text': '#e2e8f0'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-in',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        glow: {
+                            'from': { boxShadow: '0 0 20px #3182ce' },
+                            'to': { boxShadow: '0 0 30px #0bc5ea, 0 0 40px #0bc5ea' }
+                        },
+                        slideUp: {
+                            'from': { opacity: '0', transform: 'translateY(30px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeIn: {
+                            'from': { opacity: '0' },
+                            'to': { opacity: '1' }
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="font-inter bg-gradient-to-br from-dark via-primary to-secondary text-white overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-dark/90 backdrop-blur-md z-50 border-b border-gray-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-accent">Muhammad Saqib</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-accent-light transition-colors duration-300">Home</a>
+                        <a href="#about" class="hover:text-accent-light transition-colors duration-300">About</a>
+                        <a href="#education" class="hover:text-accent-light transition-colors duration-300">Education</a>
+                        <a href="#projects" class="hover:text-accent-light transition-colors duration-300">Projects</a>
+                        <a href="#skills" class="hover:text-accent-light transition-colors duration-300">Skills</a>
+                        <a href="#contact" class="hover:text-accent-light transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-accent/10 to-accent-light/10"></div>
+        <div class="container mx-auto px-4 z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 animate-slide-up">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                        Hi, I'm <span class="text-accent-light">Muhammad Saqib</span>
+                    </h1>
+                    <div class="text-xl md:text-3xl font-medium mb-6 h-20">
+                        <span class="text-light-text">I'm a </span>
+                        <span id="typewriter" class="text-accent-light border-r-2 border-accent-light animate-pulse"></span>
+                    </div>
+                    <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+                        A passionate problem solver first — and a developer second. I chase solutions using the MERN Stack to build digital systems that matter and create impactful change in Pakistan.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#projects" class="bg-accent hover:bg-accent-light text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                            Hire Me
+                        </a>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="flex gap-6 mt-8 justify-center lg:justify-start">
+                        <a href="https://github.com/muhammadsaqibs" target="_blank" class="text-2xl hover:text-accent-light transition-colors duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-saqib-ab4315291" target="_blank" class="text-2xl hover:text-accent-light transition-colors duration-300">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/saqib105official" target="_blank" class="text-2xl hover:text-accent-light transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:saqib.s09651100@gmail.com" class="text-2xl hover:text-accent-light transition-colors duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                    <div class="relative animate-float">
+                        <!-- Professional portrait of Muhammad Saqib in traditional Pakistani attire with warm lighting -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                             alt="Muhammad Saqib - Professional Profile" 
+                             class="w-80 h-80 lg:w-96 lg:h-96 rounded-full border-4 border-accent shadow-2xl animate-glow object-cover" />
+                        <div class="absolute -top-4 -right-4 bg-success text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">
+                            Available for Hire
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-secondary/50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 animate-slide-up">
+                    <span class="text-accent-light">About</span> Me
+                </h2>
+                
+                <div class="bg-primary/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-gray-600/30 animate-fade-in">
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                        Hi, I'm <span class="text-accent-light font-semibold">Muhammad Saqib</span>, a passionate problem solver first — and a developer second. While others chase code, I chase solutions. My journey into tech began with a deep desire to fix what's broken around us — especially in Pakistan — using technology as a tool for change.
+                    </p>
+                    
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                        I specialize in the <span class="text-accent font-semibold">MERN Stack</span>, and I build digital systems that are not just functional, but impactful. Every line of code I write is fueled by purpose: to solve real problems, not just follow tutorials.
+                    </p>
+                    
+                    <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                        I don't just aim to become a full-stack developer — I aim to become a builder of systems that matter. Whether it's energy management, digital automation, or smart tools, I believe in creating software that speaks — that works silently in the background, transforming lives.
+                    </p>
+                    
+                    <div class="border-l-4 border-accent-light pl-6">
+                        <p class="text-xl font-medium text-accent-light italic">
+                            "This isn't just my career — it's my mission."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent-light">20</div>
+                        <div class="text-gray-300">Years Old</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent-light">6th</div>
+                        <div class="text-gray-300">Semester</div>
+                    </div>
+                    <div class="text-3xl font-bold text-accent-light">10+</div>
+                        <div class="text-gray-300">Projects</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent-light">3.53</div>
+                        <div class="text-gray-300">CGPA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                My <span class="text-accent-light">Education</span> Journey
+            </h2>
+            
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Center Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-accent to-accent-light rounded-full"></div>
+                
+                <!-- Education Items -->
+                <div class="space-y-16">
+                    <!-- University -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-primary/70 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 hover:border-accent/50 transition-all duration-300">
+                                <h3 class="text-xl font-bold text-accent-light mb-2">COMSATS University Islamabad</h3>
+                                <h4 class="text-lg font-semibold text-white mb-2">Bachelor in Computer Science</h4>
+                                <p class="text-gray-300 mb-2">Current Semester: 6th</p>
+                                <p class="text-gray-300 mb-2">CGPA: 3.53/4.00</p>
+                                <p class="text-sm text-gray-400">Feb 2023 - June 2027</p>
+                                <div class="mt-3">
+                                    <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm">In Progress</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2">
+                            <!-- COMSATS University building exterior with modern architecture -->
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" 
+                                 alt="COMSATS University" 
+                                 class="w-20 h-20 rounded-full border-4 border-accent shadow-xl bg-white object-cover" />
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    
+                    <!-- Intermediate -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2">
+                            <!-- Punjab Daanish School building with students and flag -->
+                            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" 
+                                 alt="Punjab Daanish Higher Secondary School" 
+                                 class="w-20 h-20 rounded-full border-4 border-success shadow-xl bg-white object-cover" />
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-primary/70 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 hover:border-success/50 transition-all duration-300">
+                                <h3 class="text-xl font-bold text-success mb-2">Punjab Daanish Higher Secondary School</h3>
+                                <h4 class="text-lg font-semibold text-white mb-2">Intermediate in Computer Science (ICS)</h4>
+                                <p class="text-gray-300 mb-2">Marks: 965/1100 (87%)</p>
+                                <p class="text-gray-300 mb-2">Grade: A</p>
+                                <p class="text-sm text-gray-400">Mianwali, Pakistan</p>
+                                <div class="mt-3">
+                                    <span class="bg-success/20 text-success px-3 py-1 rounded-full text-sm">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Matriculation -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-primary/70 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 hover:border-yellow-500/50 transition-all duration-300">
+                                <h3 class="text-xl font-bold text-yellow-400 mb-2">Punjab Daanish Secondary School</h3>
+                                <h4 class="text-lg font-semibold text-white mb-2">Matriculation</h4>
+                                <p class="text-gray-300 mb-2">Marks: 1013/1100 (92%)</p>
+                                <p class="text-gray-300 mb-2">Grade: A+</p>
+                                <p class="text-sm text-gray-400">Mianwali, Pakistan</p>
+                                <div class="mt-3">
+                                    <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2">
+                            <!-- Traditional Pakistani secondary school building with courtyard -->
+                            <img src="https://pixabay.com/get/gb458eddd804aeafd226085202d8579350f1c9c875426f165677c534a49b94b197042b33381a0a04579c2be61542b1ec3b8606ec91e5d394ac9d1e6e6a5f844fe_1280.jpg" 
+                                 alt="Punjab Daanish Secondary School" 
+                                 class="w-20 h-20 rounded-full border-4 border-yellow-400 shadow-xl bg-white object-cover" />
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-secondary/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                My <span class="text-accent-light">Skills</span> & Expertise
+            </h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- Technical Skills -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-accent-light mb-8 text-center">Technical Skills</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        <div class="bg-primary/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                            <i class="fab fa-js-square text-4xl text-yellow-400 mb-3"></i>
+                            <h4 class="font-semibold text-white">JavaScript</h4>
+                        </div>
+                        <div class="bg-primary/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                            <i class="fab fa-react text-4xl text-blue-400 mb-3"></i>
+                            <h4 class="font-semibold text-white">React.js</h4>
+                        </div>
+                        <div class="bg-primary/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                            <i class="fab fa-node-js text-4xl text-green-400 mb-3"></i>
+                            <h4 class="font-semibold text-white">Node.js</h4>
+                        </div>
+                        <div class="bg-primary/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                            <i class="fas fa-database text-4xl text-green-600 mb-3"></i>
+                            <h4 class="font-semibold text-white">MongoDB</h4>
+                        </div>
+                        <div class="bg-primary/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                            <i class="fab fa-python text-4xl text-blue-500 mb-3"></i>
+                            <h4 class="font-semibold text-white">Python</h4>
+                        </div>
+                        <div class="bg-primary/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                            <i class="fas fa-code text-4xl text-purple-400 mb-3"></i>
+                            <h4 class="font-semibold text-white">C++</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-light mb-8 text-center">Soft Skills</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-primary/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 hover:border-success/50 transition-all duration-300">
+                            <i class="fas fa-lightbulb text-2xl text-yellow-400 mb-3"></i>
+                            <h4 class="font-semibold text-white mb-2">Problem Solving</h4>
+                            <p class="text-gray-300 text-sm">Analytical thinking and creative solutions</p>
+                        </div>
+                        <div class="bg-primary/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 hover:border-success/50 transition-all duration-300">
+                            <i class="fas fa-clock text-2xl text-blue-400 mb-3"></i>
+                            <h4 class="font-semibold text-white mb-2">Time Management</h4>
+                            <p class="text-gray-300 text-sm">Efficient project delivery</p>
+                        </div>
+                        <div class="bg-primary/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 hover:border-success/50 transition-all duration-300">
+                            <i class="fas fa-users text-2xl text-green-400 mb-3"></i>
+                            <h4 class="font-semibold text-white mb-2">Communication</h4>
+                            <p class="text-gray-300 text-sm">Clear and effective interaction</p>
+                        </div>
+                        <div class="bg-primary/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 hover:border-success/50 transition-all duration-300">
+                            <i class="fas fa-brain text-2xl text-purple-400 mb-3"></i>
+                            <h4 class="font-semibold text-white mb-2">Quick Learner</h4>
+                            <p class="text-gray-300 text-sm">Rapid technology adaptation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                My <span class="text-accent-light">Projects</span> Portfolio
+            </h2>
+            
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- NewsApp Project -->
+                <div class="bg-primary/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Modern news website interface with headlines and articles -->
+                    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" 
+                         alt="NewsApp Project Interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent-light mb-3">NewsApp</h3>
+                        <p class="text-gray-300 mb-4">A modern news application with real-time updates and clean UI design.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-sm">JavaScript</span>
+                            <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-sm">API</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/NewsApp" target="_blank" class="flex-1 bg-accent hover:bg-accent-light text-white text-center py-2 rounded-lg transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-accent hover:bg-accent text-accent hover:text-white text-center py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-play mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Editor Project -->
+                <div class="bg-primary/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Clean text editor interface with formatting tools -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" 
+                         alt="Text Editor Interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent-light mb-3">Smart Text Editor</h3>
+                        <p class="text-gray-300 mb-4">Feature-rich text editor with modern formatting capabilities and clean interface.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-sm">CSS</span>
+                            <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-sm">JavaScript</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/Text-editor" target="_blank" class="flex-1 bg-accent hover:bg-accent-light text-white text-center py-2 rounded-lg transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-accent hover:bg-accent text-accent hover:text-white text-center py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-play mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Currency Converter Project -->
+                <div class="bg-primary/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Currency exchange interface with flags and conversion rates -->
+                    <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" 
+                         alt="Currency Converter Interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent-light mb-3">Currency Converter</h3>
+                        <p class="text-gray-300 mb-4">Real-time currency converter with API integration and responsive design.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-sm">JavaScript</span>
+                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-sm">API</span>
+                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-sm">CSS</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/MY-CURRENCY-CONVERTER-APP" target="_blank" class="flex-1 bg-accent hover:bg-accent-light text-white text-center py-2 rounded-lg transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-accent hover:bg-accent text-accent hover:text-white text-center py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-play mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Desk Notes Project -->
+                <div class="bg-primary/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Digital notes app interface with organized notes -->
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" 
+                         alt="Smart Notes Interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent-light mb-3">Smart Desk Notes</h3>
+                        <p class="text-gray-300 mb-4">Intelligent note-taking app with organization and search capabilities.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-sm">Node.js</span>
+                            <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-sm">MongoDB</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/smart-desk-notes" target="_blank" class="flex-1 bg-accent hover:bg-accent-light text-white text-center py-2 rounded-lg transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-accent hover:bg-accent text-accent hover:text-white text-center py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-play mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce Website Project -->
+                <div class="bg-primary/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Modern e-commerce website with product showcase -->
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" 
+                         alt="E-commerce Website Interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent-light mb-3">E-commerce Platform</h3>
+                        <p class="text-gray-300 mb-4">Full-featured e-commerce website with shopping cart and payment integration.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-sm">MERN</span>
+                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-sm">Payment</span>
+                            <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-sm">Responsive</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/E-commerce-website" target="_blank" class="flex-1 bg-accent hover:bg-accent-light text-white text-center py-2 rounded-lg transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-accent hover:bg-accent text-accent hover:text-white text-center py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-play mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Meter App Project -->
+                <div class="bg-primary/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600/30 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Smart meter dashboard with energy monitoring graphs -->
+                    <img src="https://pixabay.com/get/g4931e421c29d5ff90117626aaca001d67acc5d4d500200b70dd5c69a6057b98de27b796968b2fff0bc8aeb026c890cad0e962f6f75def8f691ecd74647f8a910_1280.jpg" 
+                         alt="Smart Meter App Interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent-light mb-3">Smart Meter App</h3>
+                        <p class="text-gray-300 mb-4">IoT-based smart energy monitoring application with real-time data visualization.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-sm">IoT</span>
+                            <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-sm">Analytics</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="https://github.com/muhammadsaqibs/smart-meter-app" target="_blank" class="flex-1 bg-accent hover:bg-accent-light text-white text-center py-2 rounded-lg transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 border border-accent hover:bg-accent text-accent hover:text-white text-center py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-play mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com/muhammadsaqibs" target="_blank" class="bg-accent hover:bg-accent-light text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 inline-block">
+                    <i class="fab fa-github mr-2"></i>
+                    View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Goals Section -->
+    <section class="py-20 bg-secondary/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                My <span class="text-accent-light">Future Goals</span> & Vision
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-primary/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-gray-600/30">
+                    <div class="text-center mb-8">
+                        <i class="fas fa-rocket text-4xl text-accent-light mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-4">Transforming Pakistan Through Technology</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-accent/20 rounded-full p-2 flex-shrink-0">
+                                    <i class="fas fa-brain text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white mb-2">AI Mastery & Integration</h4>
+                                    <p class="text-gray-300 text-sm">Master artificial intelligence and integrate AI chatbots into my projects to create intelligent, responsive applications.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-success/20 rounded-full p-2 flex-shrink-0">
+                                    <i class="fas fa-code text-success"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white mb-2">Google Summer of Code</h4>
+                                    <p class="text-gray-300 text-sm">Contribute to open-source projects and participate in GSoC to collaborate with global developers and make impactful contributions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-purple-500/20 rounded-full p-2 flex-shrink-0">
+                                    <i class="fas fa-tools text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white mb-2">No-Code Development</h4>
+                                    <p class="text-gray-300 text-sm">Become proficient in Bubble.io and no-code platforms to rapidly prototype and deploy solutions for real-world problems.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-yellow-500/20 rounded-full p-2 flex-shrink-0">
+                                    <i class="fas fa-trophy text-yellow-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white mb-2">Problem-Solving Excellence</h4>
+                                    <p class="text-gray-300 text-sm">Enhance my algorithmic thinking through LeetCode and develop solutions that address Pakistan's unique technological challenges.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-6 bg-gradient-to-r from-accent/10 to-accent-light/10 rounded-xl border-l-4 border-accent-light">
+                        <h4 class="font-bold text-xl text-accent-light mb-3">My Ultimate Mission</h4>
+                        <p class="text-gray-300 leading-relaxed">
+                            To become a builder of systems that matter — creating AI-powered software solutions that work silently in the background, transforming lives across Pakistan. I aim to bridge the gap between cutting-edge technology and real-world problems, making a lasting impact that extends beyond just code.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                Let's <span class="text-accent-light">Connect</span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+                        <p class="text-gray-300 mb-8">
+                            I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to connect, feel free to reach out!
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-accent/20 rounded-full p-3">
+                                <i class="fas fa-envelope text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Email</h4>
+                                <a href="mailto:saqib.s09651100@gmail.com" class="text-gray-300 hover:text-accent-light transition-colors duration-300">
+                                    saqib.s09651100@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4">
+                            <div class="bg-accent/20 rounded-full p-3">
+                                <i class="fas fa-phone text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Phone</h4>
+                                <a href="tel:+923267263279" class="text-gray-300 hover:text-accent-light transition-colors duration-300">
+                                    +92 326 726 3279
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4">
+                            <div class="bg-accent/20 rounded-full p-3">
+                                <i class="fas fa-map-marker-alt text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Location</h4>
+                                <span class="text-gray-300">Multan, Punjab, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div>
+                        <h4 class="font-semibold text-white mb-4">Connect on Social Media</h4>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/muhammadsaqibs" target="_blank" class="bg-primary/50 p-3 rounded-full hover:bg-accent/50 transition-all duration-300">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/muhammad-saqib-ab4315291" target="_blank" class="bg-primary/50 p-3 rounded-full hover:bg-accent/50 transition-all duration-300">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="https://www.instagram.com/saqib105official" target="_blank" class="bg-primary/50 p-3 rounded-full hover:bg-accent/50 transition-all duration-300">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-primary/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30">
+                    <h3 class="text-xl font-bold text-white mb-6">Send Me a Message</h3>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 bg-secondary/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors duration-300" placeholder="Your Name">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 bg-secondary/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors duration-300" placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                            <input type="text" class="w-full px-4 py-3 bg-secondary/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors duration-300" placeholder="Project Collaboration">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-secondary/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors duration-300" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent hover:bg-accent-light text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12 border-t border-gray-700/50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold text-accent-light">Muhammad Saqib</h3>
+                    <p class="text-gray-400">Full Stack Developer & Problem Solver</p>
+                </div>
+                
+                <div class="text-gray-400 text-sm">
+                    © 2024 Muhammad Saqib. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Typewriter Effect
+        (function() {
+            const words = ['Problem Solver', 'MERN Stack Developer', 'AI Enthusiast', 'Software Engineer', 'Full Stack Developer', 'Tech Innovator'];
+            let i = 0;
+            let timer;
+
+            function typingEffect() {
+                let word = words[i].split("");
+                var loopTyping = function() {
+                    if (word.length > 0) {
+                        document.getElementById('typewriter').innerHTML += word.shift();
+                    } else {
+                        deletingEffect();
+                        return false;
+                    };
+                    timer = setTimeout(loopTyping, 100);
+                };
+                loopTyping();
+            };
+
+            function deletingEffect() {
+                let word = words[i].split("");
+                var loopDeleting = function() {
+                    if (word.length > 0) {
+                        word.pop();
+                        document.getElementById('typewriter').innerHTML = word.join("");
+                    } else {
+                        if (words.length > (i + 1)) {
+                            i++;
+                        } else {
+                            i = 0;
+                        };
+                        typingEffect();
+                        return false;
+                    };
+                    timer = setTimeout(loopDeleting, 50);
+                };
+                loopDeleting();
+            }
+
+            typingEffect();
+        })();
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Form Submission Handler (placeholder)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // TODO: Implement form submission logic with proper backend integration
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Mobile Menu Toggle (if needed)
+        const mobileMenuButton = document.querySelector('.md\\:hidden button');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                // TODO: Implement mobile menu toggle functionality
+                console.log('Mobile menu toggle clicked');
+            });
+        }
+    </script>
+</body>
+</html>
