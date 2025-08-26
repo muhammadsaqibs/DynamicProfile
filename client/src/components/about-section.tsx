@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import profileImagePath from "@assets/b6d49343-f6ef-46b2-8de9-c73f546dded9_1755833600739.jpg";
-
+//import profileImagePath from "@assets/b6d49343-f6ef-46b2-8de9-c73f546dded9_1755833600739.jpg";
+import profile from "../asset/profile.jpg";
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-dark-800">
@@ -72,7 +72,7 @@ export default function AboutSection() {
                 transition={{ repeat: Infinity, duration: 4 }}
               ></motion.div>
               <img
-                src={profileImagePath}
+                src={profile}
                 alt="Muhammad Saqib in professional setting"
                 className="relative z-10 rounded-2xl shadow-2xl shadow-primary-500/20 max-w-sm w-full"
                 data-testid="about-image"

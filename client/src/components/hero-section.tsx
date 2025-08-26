@@ -2,8 +2,8 @@ import { Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Typewriter from "./typewriter";
-import profileImagePath from "@assets/b6d49343-f6ef-46b2-8de9-c73f546dded9_1755833600739.jpg";
-
+//import profileImagePath from "@assets/b6d49343-f6ef-46b2-8de9-c73f546dded9_1755833600739.jpg";
+import profile from "../asset/profile.jpg";
 export default function HeroSection() {
   const typewriterWords = [
     "Problem Solver",
@@ -119,7 +119,7 @@ export default function HeroSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-cyan-400 rounded-full blur-2xl opacity-30 animate-pulse"></div>
             <img
-              src={profileImagePath}
+              src={profile}
               alt="Muhammad Saqib - Professional Profile"
               className="relative z-10 w-80 h-80 rounded-full object-cover border-4 border-primary-500/30 shadow-2xl shadow-primary-500/20"
               data-testid="profile-image"
