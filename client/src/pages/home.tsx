@@ -6,6 +6,7 @@ import SkillsSection from "@/components/skills-section";
 import ProjectsSection from "@/components/projects-section";
 import GoalsSection from "@/components/goals-section";
 import ContactSection from "@/components/contact-section";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <SkillsSection />
         <ProjectsSection />
         <GoalsSection />
+        <Testimonials />
         <ContactSection />
       </main>
       <footer className="bg-dark-950 border-t border-primary-500/20 py-8">

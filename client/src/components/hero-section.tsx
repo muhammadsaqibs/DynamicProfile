@@ -2,8 +2,8 @@ import { Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Typewriter from "./typewriter";
-//import profileImagePath from "@assets/b6d49343-f6ef-46b2-8de9-c73f546dded9_1755833600739.jpg";
 import profileNew from "../asset/profile-new.jpg";
+
 export default function HeroSection() {
   const typewriterWords = [
     "Problem Solver",
@@ -88,13 +88,13 @@ export default function HeroSection() {
             viewport={{ once: true }}
           >
             {/* ✅ Download Resume Button */}
-            <a href="/saqib-resume.pdf" download="Muhammad_Saqib_Resume.pdf">
+            <a href="/Msaqib.pdf" download="Muhammad_Saqib_Resume.pdf">
               <Button className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary-500/25">
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>
             </a>
-
+           
             {/* Contact Button */}
             <Button
               variant="outline"

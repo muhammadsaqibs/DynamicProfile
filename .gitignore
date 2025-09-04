@@ -1,8 +1,29 @@
-node_modules
+# Dependencies
+node_modules/
+.pnpm-debug.log*
+yarn.lock
+package-lock.json
 
+# Build output
+dist/
+build/
+
+# System files
 .DS_Store
+Thumbs.db
 
-vite.config.ts.*
-*.tar.gz
+# Local / IDE configs
+.vscode/
+.idea/
 .local/
 
+# Replit specific (remove traces)
+.replit
+replit.nix
+replit.md
+
+# Logs
+*.log
+
+# Archives
+*.tar.gz
