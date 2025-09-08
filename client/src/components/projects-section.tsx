@@ -1,6 +1,7 @@
 import { Github, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import currencyDemo from "../asset/currency-demo.png";
 
 export default function ProjectsSection() {
   const projects = [
@@ -21,9 +22,8 @@ export default function ProjectsSection() {
       technologies: ["JavaScript", "HTML5", "CSS3", "API"],
       githubUrl:
         "https://github.com/muhammadsaqibs/MY-CURRENCY-CONVERTER-APP",
-      demoUrl: "",
-      image:
-        "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+      demoUrl: "https://officialcurrencyconverter.netlify.app/",
+      image: currencyDemo,
     },
     {
       title: "Smart Desk Notes",
@@ -107,9 +107,8 @@ export default function ProjectsSection() {
                 <img
                   src={project.image}
                   alt={`${project.title} - Project Screenshot`}
-                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full aspect-[16/9] object-cover md:aspect-[4/3] lg:aspect-[16/9] transition-transform duration-300 hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 to-transparent"></div>
               </div>
 
               {/* Project Info */}
@@ -135,6 +134,7 @@ export default function ProjectsSection() {
 
                 {/* Buttons */}
                 <div className="flex justify-between items-center">
+                  {/* Github Button */}
                   <Button
                     variant="ghost"
                     size="sm"
@@ -154,17 +154,37 @@ export default function ProjectsSection() {
                     </a>
                   </Button>
 
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-gray-400 hover:text-primary-400 hover:bg-primary-500/10"
-                    data-testid={`demo-${project.title
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`}
-                  >
-                    <Play className="mr-2 h-4 w-4" />
-                    Demo
-                  </Button>
+                  {/* Demo Button */}
+                  {project.demoUrl ? (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      asChild
+                      className="text-gray-400 hover:text-primary-400 hover:bg-primary-500/10"
+                      data-testid={`demo-${project.title
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")}`}
+                    >
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Play className="mr-2 h-4 w-4" />
+                        Demo
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      disabled
+                      className="text-gray-500 cursor-not-allowed"
+                    >
+                      <Play className="mr-2 h-4 w-4" />
+                      Demo
+                    </Button>
+                  )}
                 </div>
               </div>
             </motion.div>
