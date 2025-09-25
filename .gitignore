@@ -17,10 +17,6 @@ Thumbs.db
 .idea/
 .local/
 
-# Replit specific (remove traces)
-.replit
-replit.nix
-replit.md
 
 # Logs
 *.log

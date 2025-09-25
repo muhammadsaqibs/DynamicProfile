@@ -5,16 +5,7 @@ import currencyDemo from "../asset/currency-demo.png";
 
 export default function ProjectsSection() {
   const projects = [
-    {
-      title: "News App",
-      description:
-        "A comprehensive news aggregation app with real-time updates, category filtering, and responsive design.",
-      technologies: ["React.js", "News API", "CSS3"],
-      githubUrl: "https://github.com/muhammadsaqibs/NewsApp",
-      demoUrl: "",
-      image:
-        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    },
+  
     {
       title: "Currency Converter",
       description:
@@ -31,9 +22,29 @@ export default function ProjectsSection() {
         "Intelligent note-taking application with search functionality, categories, and cloud synchronization.",
       technologies: ["React.js", "Node.js", "MongoDB"],
       githubUrl: "https://github.com/muhammadsaqibs/smart-desk-notes",
-      demoUrl: "",
+      demoUrl: "https://smartdesknote.netlify.app/",
       image:
         "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+    },
+     {
+      title: "Advanced Text Editor",
+      description:
+        "Feature-rich text editor with formatting options, file operations, and real-time preview functionality.",
+      technologies: ["JavaScript", "HTML5", "CSS3"],
+      githubUrl: "https://github.com/muhammadsaqibs/Text-editor",
+      demoUrl: "https://muhammadsaqibs.github.io/Text-editor/",
+      image:
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+    },
+      {
+      title: "News App",
+      description:
+        "A comprehensive news aggregation app with real-time updates, category filtering, and responsive design.",
+      technologies: ["React.js", "News API", "CSS3"],
+      githubUrl: "https://github.com/muhammadsaqibs/NewsApp",
+      demoUrl: "",
+      image:
+        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
     },
     {
       title: "E-commerce Platform",
@@ -45,16 +56,7 @@ export default function ProjectsSection() {
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
     },
-    {
-      title: "Advanced Text Editor",
-      description:
-        "Feature-rich text editor with formatting options, file operations, and real-time preview functionality.",
-      technologies: ["JavaScript", "HTML5", "CSS3"],
-      githubUrl: "https://github.com/muhammadsaqibs/Text-editor",
-      demoUrl: "",
-      image:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    },
+   
     {
       title: "Smart Meter App",
       description:
