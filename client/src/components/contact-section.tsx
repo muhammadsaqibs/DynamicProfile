@@ -118,7 +118,7 @@ export default function ContactSection() {
             <motion.div className="pt-8" variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
               <h3 className="text-lg font-semibold text-primary-400 mb-4">Connect with me:</h3>
               <div className="flex space-x-4">
-                <a href="https://www.linkedin.com/in/muhammad-saqib-ab4315291" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/muhammad-saqib-5bb30537b/" target="_blank" rel="noopener noreferrer"
                   className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center hover:bg-primary-500/30 transition-colors border border-primary-500/30">
                   <Linkedin size={24} />
                 </a>
