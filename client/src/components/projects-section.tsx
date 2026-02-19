@@ -52,7 +52,7 @@ export default function ProjectsSection() {
         "Full-featured e-commerce platform with user authentication, cart functionality, and payment integration.",
       technologies: ["MERN Stack", "Payment API", "Authentication"],
       githubUrl: "https://github.com/muhammadsaqibs/E-commerce-website",
-      demoUrl: "",
+      demoUrl: "https://artisanconnects.netlify.app/",
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
     },
