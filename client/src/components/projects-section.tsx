@@ -47,11 +47,11 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
     },
     {
-      title: "E-commerce Platform",
+      title: "Artisan Connect",
       description:
-        "Full-featured e-commerce platform with user authentication, cart functionality, and payment integration.",
+        "Artisan-Connect is a MERN-based platform that connects users with local service providers, featuring secure authentication, cart management, and seamless online payments.",
       technologies: ["MERN Stack", "Payment API", "Authentication"],
-      githubUrl: "https://github.com/muhammadsaqibs/E-commerce-website",
+      githubUrl: "https://github.com/muhammadsaqibs/Artisan-Connect",
       demoUrl: "https://artisanconnects.netlify.app/",
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
