@@ -46,16 +46,7 @@ export default function ProjectsSection() {
       image:
         "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
     },
-      {
-      title: "News App",
-      description:
-        "A comprehensive news aggregation app with real-time updates, category filtering, and responsive design.",
-      technologies: ["React.js", "News API", "CSS3"],
-      githubUrl: "https://github.com/muhammadsaqibs/NewsApp",
-      demoUrl: "",
-      image:
-        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    },
+      
     {
       title: "Artisan Connect",
       description:
@@ -66,7 +57,16 @@ export default function ProjectsSection() {
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
     },
-   
+   {
+      title: "News App",
+      description:
+        "A comprehensive news aggregation app with real-time updates, category filtering, and responsive design.",
+      technologies: ["React.js", "News API", "CSS3"],
+      githubUrl: "https://github.com/muhammadsaqibs/NewsApp",
+      demoUrl: "",
+      image:
+        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+    }
    
   ];
 
