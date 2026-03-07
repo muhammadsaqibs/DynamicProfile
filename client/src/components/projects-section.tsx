@@ -2,9 +2,19 @@ import { Github, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import currencyDemo from "../asset/currency-demo.png";
-
+import railwayDemo from "../asset/railway.png";
 export default function ProjectsSection() {
   const projects = [
+     {
+      title: "Advanced Railway App",
+      description:
+        "The Railway Management System is a web-based application designed to manage railway operations such as train management, ticket booking, seat reservation, and payment handling.",
+      technologies: ["php", "mysql", "html" ,"css"],
+      githubUrl: "https://github.com/muhammadsaqibs/railway_management",
+      demoUrl: "http://pakrailwaymanagement.free.nf/railway_management/public",
+      image:
+        railwayDemo,
+    },
   
     {
       title: "Currency Converter",
@@ -57,16 +67,7 @@ export default function ProjectsSection() {
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
     },
    
-    {
-      title: "Smart Meter App",
-      description:
-        "IoT-enabled smart meter monitoring system with real-time energy consumption tracking and analytics.",
-      technologies: ["React.js", "IoT Integration", "Data Analytics"],
-      githubUrl: "https://github.com/muhammadsaqibs/smart-meter-app",
-      demoUrl: "",
-      image:
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    },
+   
   ];
 
   return (

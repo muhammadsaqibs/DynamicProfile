@@ -6,7 +6,7 @@ import SkillsSection from "@/components/skills-section";
 import ProjectsSection from "@/components/projects-section";
 import GoalsSection from "@/components/goals-section";
 import ContactSection from "@/components/contact-section";
-import Testimonials from "@/components/Testimonials";
+//import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
         <SkillsSection />
         <ProjectsSection />
         <GoalsSection />
-        <Testimonials />
+        
         <ContactSection />
       </main>
       <footer className="bg-dark-950 border-t border-primary-500/20 py-8">
@@ -28,7 +28,7 @@ export default function Home() {
             Muhammad Saqib
           </div>
           <p className="text-gray-400 text-sm mb-4">
-            Problem Solver • MERN Stack Developer • AI Enthusiast
+            Problem Solver • Full Stack Developer • AI Enthusiast
           </p>
           <p className="text-gray-500 text-xs">
             © 2024 Muhammad Saqib. All rights reserved. Built with passion and purpose.
