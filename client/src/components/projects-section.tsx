@@ -79,7 +79,7 @@ export default function ProjectsSection() {
     "Face Recognition Library",
     "Webcam API"
   ],
-  "githubUrl": "https://github.com/muhammadsaqibs/EfficientBiometricMonitoring",
+  "githubUrl": "https://github.com/muhammadsaqibs/EFFICIENT-BIOMETRIC-AND-MONITORING-SYSTEM",
   "demoUrl": "",
   "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
 }
