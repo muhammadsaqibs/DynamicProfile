@@ -43,10 +43,10 @@ export default function EducationSection() {
                     </div>
                     <p className="text-xl font-semibold mb-2">COMSATS University Islamabad</p>
                     <p className="text-gray-400 mb-2">Feb 2023 - June 2027</p>
-                    <p className="text-gray-400 mb-2">Current: 7th Semester</p>
+                    <p className="text-gray-400 mb-2">Current: 8th Semester</p>
                     <div className="flex items-center justify-center md:justify-end">
                       <Award className="text-primary-400 mr-2" size={20} />
-                      <p className="text-primary-400 font-semibold">CGPA: 3.51/4.00</p>
+                      <p className="text-primary-400 font-semibold">CGPA: 3.46/4.00</p>
                     </div>
                     <p className="text-sm text-gray-400 mt-4">
                       Actively building skills in computer science with a focus on Software and Web Development projects.

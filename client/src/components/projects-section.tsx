@@ -66,7 +66,23 @@ export default function ProjectsSection() {
       demoUrl: "",
       image:
         "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    }
+    },
+    {
+  "title": "Efficient Biometric & Monitoring System",
+  "description": "A real-time continuous authentication system that monitors computer users through facial recognition. Unlike traditional login systems that only verify identity once, this system captures and verifies face images every 5–10 seconds using the built-in webcam. If an unauthorized person appears or the user steps away, the workstation locks instantly and logs the event for security auditing. Built as a final year project with a complete admin dashboard, user enrollment module, and real-time session monitoring.",
+  "technologies": [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "OpenCV",
+    "Face Recognition Library",
+    "Webcam API"
+  ],
+  "githubUrl": "https://github.com/muhammadsaqibs/EfficientBiometricMonitoring",
+  "demoUrl": "",
+  "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+}
    
   ];
 
