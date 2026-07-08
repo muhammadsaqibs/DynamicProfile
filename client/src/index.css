@@ -182,3 +182,8 @@
   outline: 2px solid var(--primary-500);
   outline-offset: 2px;
 }
+@layer utilities {
+  .border-border {
+    border-color: hsl(var(--border));
+  }
+}
