@@ -50,7 +50,7 @@ export default function ProjectsSection() {
     {
       title: "Artisan Connect",
       description:
-        "Artisan-Connect is a MERN-based platform that connects users with local service providers, featuring secure authentication, cart management, and seamless online payments.",
+        "Artisan-Connect is an absolutely MERN-based platform that connects users with local service providers, featuring secure authentication, cart management, and seamless online payments.",
       technologies: ["MERN Stack", "Payment API", "Authentication"],
       githubUrl: "https://github.com/muhammadsaqibs/Artisan-Connect",
       demoUrl: "https://artisanconnects.netlify.app/",
@@ -102,7 +102,7 @@ export default function ProjectsSection() {
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Here are some of my projects that showcase my technical skills and
+            Here are some of my projects which  showcase my technical skills and
             problem-solving approach
           </p>
         </motion.div>
