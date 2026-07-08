@@ -39,7 +39,7 @@ export default function ProjectsSection() {
      {
       title: "Advanced Text Editor",
       description:
-        "Feature-rich text editor with formatting options, file operations, and real-time preview functionality.",
+        "Feature-rich text editor with full of formatting options, file operations, and real-time preview functionality.",
       technologies: ["JavaScript", "HTML5", "CSS3"],
       githubUrl: "https://github.com/muhammadsaqibs/Text-editor",
       demoUrl: "https://muhammadsaqibs.github.io/Text-editor/",
