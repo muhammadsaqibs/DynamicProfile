@@ -4,9 +4,10 @@ import AboutSection from "@/components/about-section";
 import EducationSection from "@/components/education-section";
 import SkillsSection from "@/components/skills-section";
 import ProjectsSection from "@/components/projects-section";
+import DeliveredProjectsSection from "@/components/delivered-projects-section";
 import GoalsSection from "@/components/goals-section";
 import ContactSection from "@/components/contact-section";
-//import Testimonials from "@/components/Testimonials";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
         <AboutSection />
         <EducationSection />
         <SkillsSection />
+        <DeliveredProjectsSection />
         <ProjectsSection />
+        <Testimonials />
         <GoalsSection />
         
         <ContactSection />
