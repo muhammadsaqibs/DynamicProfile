@@ -1,10 +1,5 @@
 import { Star } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode } from "swiper/modules";
 import { motion } from "framer-motion";
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/free-mode";
 
 type Testimonial = {
   name: string;
@@ -24,26 +19,7 @@ export default function Testimonials() {
         "The corporate website delivered for our appliance maintenance service was exceptional. It's fast, responsive, and perfectly tailored to attract new clients. Highly recommended!",
       rating: 5,
     },
-    {
-      name: "Muhammad Umair Khan",
-      position: "Owner, Chiropractic Billing Platform",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      content:
-        "Outstanding work on our medical billing platform. The glassmorphism UI and custom animations gave our business a premium feel that our US-based clients truly appreciate.",
-      rating: 5,
-    },
-    {
-      name: "Muhammad Amman",
-      position: "Owner, Retail Management & POS System",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      content:
-        "The complete full-stack POS and inventory system completely transformed our store operations. Real-time stock tracking and automated billing have saved us countless hours.",
-      rating: 5,
-    },
   ];
-
-  // Duplicate the array to ensure infinite scrolling works perfectly on desktop (since slidesPerView is 3)
-  const testimonials = [...coreTestimonials, ...coreTestimonials];
 
   return (
     <section id="testimonials" className="py-20 bg-dark-950 overflow-hidden border-t border-primary-500/10">
@@ -65,63 +41,39 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        {/* Swiper Carousel */}
-        <div className="[&_.swiper-wrapper]:!ease-linear">
-          <Swiper
-            modules={[Autoplay, FreeMode]}
-            spaceBetween={20}
-            freeMode={{ enabled: true, momentum: false }}
-            slidesPerView={1}
-            loop={true}
-            speed={5000}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-          >
-            {testimonials.map((testimonial, index) => (
-              <SwiperSlide key={index}>
-                <div className="h-full w-full flex py-4">
-                  <div className="rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-dark-800 to-dark-700 border border-primary-500/20 shadow-lg flex flex-col w-full min-h-[300px] sm:min-h-[320px] transition-transform hover:scale-105 duration-300">
-                    {/* Header */}
-                    <div className="flex items-center mb-4 sm:mb-6">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-primary-500/50"
-                      />
-                      <div>
-                        <h4 className="font-bold text-lg text-primary-400">{testimonial.name}</h4>
-                        <p className="text-sm font-medium text-cyan-500/80">
-                          {testimonial.position}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <p className="text-gray-300 mb-6 flex-grow italic leading-relaxed">
-                      "{testimonial.content}"
+        <div className="max-w-xl mx-auto">
+          {coreTestimonials.map((testimonial, index) => (
+            <div key={index} className="py-4">
+              <div className="rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-dark-800 to-dark-700 border border-primary-500/20 shadow-lg flex flex-col w-full min-h-[300px] sm:min-h-[320px]">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-primary-500/50"
+                  />
+                  <div>
+                    <h4 className="font-bold text-lg text-primary-400">{testimonial.name}</h4>
+                    <p className="text-sm font-medium text-cyan-500/80">
+                      {testimonial.position}
                     </p>
-
-                    {/* Rating */}
-                    <div className="flex gap-1 mt-auto">
-                      {[...Array(testimonial.rating)].map((_, starIndex) => (
-                        <Star
-                          key={starIndex}
-                          className="w-5 h-5 text-yellow-500 fill-yellow-500"
-                        />
-                      ))}
-                    </div>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+
+                <p className="text-gray-300 mb-6 flex-grow italic leading-relaxed">
+                  "{testimonial.content}"
+                </p>
+
+                <div className="flex gap-1 mt-auto">
+                  {[...Array(testimonial.rating)].map((_, starIndex) => (
+                    <Star
+                      key={starIndex}
+                      className="w-5 h-5 text-yellow-500 fill-yellow-500"
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

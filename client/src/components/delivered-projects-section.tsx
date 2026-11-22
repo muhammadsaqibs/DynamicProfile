@@ -12,14 +12,6 @@ export default function DeliveredProjectsSection() {
     demoText?: string;
   }> = [
     {
-      title: "Comprehensive Retail Management & POS System",
-      description: "A complete Point-of-Sale (POS) and inventory management system that streamlines billing, tracks stock in real-time, and generates financial reports for retail stores.",
-      technologies: ["React.js", "Node.js", "Laravel", "Tailwind CSS", "MongoDB"],
-      demoUrl: "https://dashboardretailmanagement.vercel.app/",
-      demoText: "Live Demo",
-      image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    },
-    {
       title: "Goodway AMC",
       description: "A corporate website and service booking platform for home appliance repair and maintenance. It helps clients easily discover services and request maintenance.",
       technologies: ["React", "Tailwind CSS", "JavaScript"],
@@ -27,14 +19,6 @@ export default function DeliveredProjectsSection() {
       demoText: "View Live Project",
       image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
     },
-    {
-      title: "Chiropractic Billing Platform",
-      description: "A specialized medical billing and revenue cycle management platform designed exclusively for chiropractic practices to handle claims, invoicing, and patient accounts.",
-      technologies: ["Laravel", "Tailwind CSS", "JavaScript", "cPanel"],
-      demoUrl: "https://chirotouchbilling.us/",
-      demoText: "View Live Project",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    }
   ];
 
   return (
