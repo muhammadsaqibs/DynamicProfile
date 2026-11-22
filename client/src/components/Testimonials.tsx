@@ -19,6 +19,14 @@ export default function Testimonials() {
         "The corporate website delivered for our appliance maintenance service was exceptional. It's fast, responsive, and perfectly tailored to attract new clients. Highly recommended!",
       rating: 5,
     },
+    {
+      name: "Faiz Ahmed",
+      position: "Client, Hafiz Clinic",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      content:
+        "Hafiz Clinic was delivered just as we needed. Patients can book appointments, use the portal, and order herbal products from one live website. It looks professional and is simple for our staff to manage.",
+      rating: 5,
+    },
   ];
 
   return (
@@ -41,7 +49,7 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="max-w-xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {coreTestimonials.map((testimonial, index) => (
             <div key={index} className="py-4">
               <div className="rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-dark-800 to-dark-700 border border-primary-500/20 shadow-lg flex flex-col w-full min-h-[300px] sm:min-h-[320px]">

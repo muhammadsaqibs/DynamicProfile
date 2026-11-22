@@ -19,6 +19,14 @@ export default function DeliveredProjectsSection() {
       demoText: "View Live Project",
       image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
     },
+    {
+      title: "Hafiz Clinic",
+      description: "A live clinic platform delivered to Faiz Ahmed, with online appointment booking, patient and staff portals, lab reports, and a store for herbal hair oil, beauty care, eye care, and home delivery.",
+      technologies: ["React", "Vite", "JavaScript"],
+      demoUrl: "https://hafizclinic.online/",
+      demoText: "View Live Project",
+      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    },
   ];
 
   return (
