@@ -13,14 +13,6 @@ export default function ProjectsSection() {
     image: string;
     demoText?: string;
   }> = [
-     {
-      title: "Advanced Railway App",
-      description: "A web application for railway operations, managing trains, ticket booking, seat reservations, and payments.",
-      technologies: ["php", "mysql", "html" ,"css"],
-      githubUrl: "https://github.com/muhammadsaqibs/railway_management",
-      demoUrl: "http://pakrailwaymanagement.free.nf/railway_management/public",
-      image: railwayDemo,
-    },
     {
       title: "Currency Converter",
       description: "Real-time currency converter using live API data, featuring historical trends and multiple currency support.",
@@ -68,6 +60,14 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/muhammadsaqibs/EFFICIENT-BIOMETRIC-AND-MONITORING-SYSTEM",
       demoUrl: "",
       image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+    },
+    {
+      title: "Advanced Railway App",
+      description: "A web application for railway operations, managing trains, ticket booking, seat reservations, and payments.",
+      technologies: ["php", "mysql", "html" ,"css"],
+      githubUrl: "https://github.com/muhammadsaqibs/railway_management",
+      demoUrl: "http://pakrailwaymanagement.free.nf/railway_management/public",
+      image: railwayDemo,
     }
   ];
 
